@@ -1,0 +1,70 @@
+.main-content{
+    header{
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0rem;
+
+        h1{
+            font-size: 1.25rem;
+            flex: 1;
+        }
+
+        nav{
+            a{
+                margin: 0 0.5rem;
+                padding: 0.5rem;
+                border-radius: 5px;
+                border: none;
+                position: relative;
+
+                &:hover{
+                    background-color: rgba($color: #3b49df, $alpha: 0.1);
+                    color: var(--main-theme);
+                }
+
+                &.active{
+                    border: none;
+                    position: relative;
+
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        left:0;
+                        right:0;
+                        bottom: 0;
+
+                        margin: 0 0.5rem;
+                        height: 3px;
+                        background-color:var(--main-theme);
+                        border-radius: 5px;
+                        transition: all 0.2s;
+                    }
+
+                    &:hover:after{
+                        margin: 0;
+                    }
+                }
+
+
+            }
+
+
+        }
+
+        select{
+            display:none;
+            padding: 0.5rem;
+            outline: none;
+            border-radius: 5px;
+
+            font-size:1rem;
+            color: var(--font-color);
+            background-color: var(--main-0);
+            border: 1px solid var(--main-3);
+
+            &:focus{
+                box-shadow: 0 0 1px 1px var(--main-theme);
+            }
+        }
+    }
+}
